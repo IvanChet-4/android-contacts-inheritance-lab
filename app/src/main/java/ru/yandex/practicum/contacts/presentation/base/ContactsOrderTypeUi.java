@@ -2,9 +2,9 @@ package ru.yandex.practicum.contacts.presentation.base;
 
 import androidx.annotation.NonNull;
 
-public class ContactsOrderTypeUi {
-    String type;
-    boolean isSelected;
+public abstract class ContactsOrderTypeUi {
+    protected final String type;
+    protected final boolean isSelected;
 
     public ContactsOrderTypeUi(@NonNull String type, boolean isSelected) {
         this.type = type;
@@ -18,5 +18,7 @@ public class ContactsOrderTypeUi {
     public boolean isSelected() {
         return isSelected;
     }
+
+   public abstract String createLogMessage();
 
 }
